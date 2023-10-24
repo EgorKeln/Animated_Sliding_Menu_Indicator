@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,*::before,*::after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family: inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*=======================================================================================================*/
+
+
+:root {
+    --clr: #2c363f;
+}
+body {
+    background: var(--clr);
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #2196f3;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+header .logo {
+    position: relative;
+    color: #fff;
+    font-size: 2em;
+    font-weight: 600;
+}
+header nav {
+    display: flex;
+    gap: 10px;
+}
+header nav a {
+    position: relative;
+    padding: 12px 20px;
+    color: #fff;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+header nav #indicator {
+    position: absolute;
+    width: 85px;
+    height: 48px;
+    background: var(--clr);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: 0.5s;
+}
+header nav #indicator::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 28px;
+    left: -20px;
+    background: transparent;
+    border-bottom-right-radius: 20px;
+    box-shadow: 5px 5px 0px 5px var(--clr);
+    transition: 0.5s;
+}
+header nav #indicator::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 28px;
+    right: -20px;
+    background: transparent;
+    border-bottom-left-radius: 20px;
+    box-shadow: -5px 5px 0px 5px var(--clr);
+    transition: 0.5s;
+}
